@@ -7,6 +7,7 @@ from main import CNNFig1
 model = CNNFig1(1)
 dummy_x = tf.zeros((1, 64, 64, 3))
 model._set_inputs(dummy_x)
+model.build(input_shape=dummy_x.shape)
 model.load_weights("my_model.h5")
 print("Model has been loaded")
 
